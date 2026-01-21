@@ -1,0 +1,19 @@
+type Message {
+  id: ID!
+  text: String!
+  sender: String!
+  imageUrl: String
+  createdAt: String!
+  updateAt: String!
+}
+
+type Query {
+  getMessages: [Message!]!
+}
+
+type Mutation {
+  sendMessage(text: String!, image: String): Message!
+  deleteMessage(id: ID!): String!
+  deleteAllMessages: String!
+  updateMessage(id: ID!, text: String, imageUrl: String): Message
+}
