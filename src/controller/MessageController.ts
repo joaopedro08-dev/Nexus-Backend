@@ -1,6 +1,6 @@
-import db from '@/lib/database.js';
+import db from '../lib/database.js';
+import { CloudinaryService } from '../service/CloudinaryService.js';
 import { GeminiController } from './GeminiController.js';
-import { CloudinaryService } from '@/service/CloudinaryService.js';
 
 const formatarDataBR = (dataStr: string): string => {
     const data = new Date(dataStr);

@@ -5,8 +5,8 @@ import { join } from 'path';
 import { buildSchema } from 'graphql';
 import { createHandler } from 'graphql-http/lib/use/express';
 import { ruruHTML } from 'ruru/server';
-import { MessageController } from "@/controller/MessageController.js";
-import { corsOptions } from "@/config/cors.js"; 
+import { MessageController } from "./controller/MessageController.js";
+import { corsOptions } from "./config/cors.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
