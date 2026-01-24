@@ -3,11 +3,17 @@ import { CloudinaryService } from '../service/CloudinaryService.js';
 import { GeminiController } from './GeminiController.js';
 
 const formatarDataBR = (dataStr: string): string => {
-    const data = new Date(dataStr);
+    const data = new Date(dataStr.includes('Z') ? dataStr : `${dataStr}Z`);
+    
     return new Intl.DateTimeFormat('pt-BR', {
-        day: '2-digit', month: '2-digit', year: 'numeric',
-        hour: '2-digit', minute: '2-digit', second: '2-digit',
-        hour12: false
+        day: '2-digit', 
+        month: '2-digit', 
+        year: 'numeric',
+        hour: '2-digit', 
+        minute: '2-digit', 
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'America/Sao_Paulo' 
     }).format(data);
 };
 
